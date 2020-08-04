@@ -18,14 +18,13 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    VideoView videoView;
-    Button go2order;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-        videoView = findViewById(R.id.simpleVideoView);
+
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -37,28 +36,30 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-
-        MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(videoView);
-
-
-//        Uri uri = Uri.parse("https://www.youtube.com/embed/TIyI2jVviI4");
-        String mediaName = "medianame";
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/raw/" + mediaName);
-
-        videoView.setMediaController(mediaController);
-        videoView.setVideoURI(uri);
-
-        videoView.start();
-
-        go2order = findViewById(R.id.go2order);
-        go2order.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent i = new Intent(getApplicationContext(),Order.this);
-                Toast.makeText(getApplicationContext(), "Going to order now!",
-                        Toast.LENGTH_LONG).show();
-            }
-        });
+//        VideoView videoView;
+//
+//        videoView = findViewById(R.id.simpleVideoView);
+//        MediaController mediaController = new MediaController(this);
+//        mediaController.setAnchorView(videoView);
+//
+//
+////        Uri uri = Uri.parse("https://www.youtube.com/embed/TIyI2jVviI4");
+//        String mediaName = "medianame";
+//        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/raw/" + mediaName);
+//
+//        videoView.setMediaController(mediaController);
+//        videoView.setVideoURI(uri);
+//
+//        videoView.start();
+//        Button go2order;
+//        go2order = findViewById(R.id.go2order);
+//        go2order.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Intent i = new Intent(getApplicationContext(),Order.this);
+//                Toast.makeText(getApplicationContext(), "Going to order now!",
+//                        Toast.LENGTH_LONG).show();
+//            }
+//        });
     }
 }
