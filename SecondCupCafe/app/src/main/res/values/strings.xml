@@ -3,4 +3,5 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Order</string>
     <string name="title_notifications">Account Settings</string>
+    <string name="welcome_message">We know you can\'t come to our cafe everyday. So we brought our delighful coffee to you. Start your day with our coffee and knock those early morning meetings. \n</string>
 </resources>

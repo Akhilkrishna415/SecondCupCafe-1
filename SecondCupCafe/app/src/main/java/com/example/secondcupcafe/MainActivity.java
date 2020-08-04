@@ -1,12 +1,12 @@
 package com.example.secondcupcafe;
 
-import android.media.AudioAttributes;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.MediaController;
+import android.widget.Toast;
 import android.widget.VideoView;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -14,14 +14,19 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import java.io.IOException;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
+    VideoView videoView;
+    Button go2order;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_homepage);
+        videoView = findViewById(R.id.simpleVideoView);
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -33,19 +38,27 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
 
 
-        String myUri = "https://www.youtube/TIyI2jVviI4"; // initialize Uri here
-        MediaPlayer mediaPlayer = new MediaPlayer();
-        mediaPlayer.setAudioAttributes(new AudioAttributes.Builder().setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                        .setUsage(AudioAttributes.USAGE_MEDIA)
-                        .build()
-        );
-        try {
-            mediaPlayer.setDataSource(myUri);
-            mediaPlayer.prepare(); // might take long! (for buffering, etc)
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        mediaPlayer.start();
-    }
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
 
+
+//        Uri uri = Uri.parse("https://www.youtube.com/embed/TIyI2jVviI4");
+        String mediaName = "medianame";
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/raw/" + mediaName);
+
+        videoView.setMediaController(mediaController);
+        videoView.setVideoURI(uri);
+
+        videoView.start();
+
+        go2order = findViewById(R.id.go2order);
+        go2order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent i = new Intent(getApplicationContext(),Order.this);
+                Toast.makeText(getApplicationContext(), "Going to order now!",
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+    }
 }
