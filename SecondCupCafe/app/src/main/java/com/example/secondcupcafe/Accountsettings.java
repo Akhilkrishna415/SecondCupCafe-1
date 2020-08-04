@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class account_settings extends AppCompatActivity {
+public class Accountsettings extends AppCompatActivity {
 
     TextView personalSettings;
 
@@ -20,7 +20,7 @@ public class account_settings extends AppCompatActivity {
         personalSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),personal_settings.class);
+                Intent i = new Intent(getApplicationContext(), Personalsettings.class);
                 startActivity(i);
             }
         });

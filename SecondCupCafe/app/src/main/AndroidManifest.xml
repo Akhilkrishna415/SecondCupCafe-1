@@ -12,8 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".personal_settings"></activity>
-        <activity android:name=".account_settings" />
+        <activity android:name=".Personalsettings"></activity>
+        <activity android:name=".Accountsettings" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".Login" />
         <activity android:name=".ColdMenu" />

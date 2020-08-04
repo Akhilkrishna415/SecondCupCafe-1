@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class personal_settings extends AppCompatActivity {
+public class Personalsettings extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
