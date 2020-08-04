@@ -12,6 +12,7 @@ public class Accountsettings extends AppCompatActivity {
     TextView personalSettings;
     TextView rating;
     TextView Contactus;
+    TextView Payment;
 
 
     @Override
@@ -43,6 +44,14 @@ public class Accountsettings extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),Contactus.class);
                 startActivity(i);
 
+            }
+        });
+        Payment=findViewById(R.id.textView2);
+        Payment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Payment.class);
+                startActivity(i);
             }
         });
 
