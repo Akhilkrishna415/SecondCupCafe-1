@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.secondcupcafe.CoffeeMenu;
+import com.example.secondcupcafe.Hot_Menu;
 import com.example.secondcupcafe.R;
 
 public class DashboardFragment extends Fragment {
@@ -35,6 +36,14 @@ public class DashboardFragment extends Fragment {
                 getActivity().startActivity(intent);
             }
         });
+        card4 = v.findViewById(R.id.hotcard);
+        card4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Hot_Menu.class);
+                getActivity().startActivity(intent);
+            }
+        });
 
       /*  card2 = v.findViewById(R.id.breakcard);
         card2.setOnClickListener(new View.OnClickListener() {
@@ -52,14 +61,7 @@ public class DashboardFragment extends Fragment {
                 getActivity().startActivity(intent);
             }
         });
-        card4 = v.findViewById(R.id.hotcard);
-        card4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), HotBev.class);
-                getActivity().startActivity(intent);
-            }
-        });
+
 
 */
         return v;}
