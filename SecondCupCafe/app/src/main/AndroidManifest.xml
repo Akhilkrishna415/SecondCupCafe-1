@@ -12,11 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Contactus"></activity>
+        <activity android:name=".Payment"></activity>
+        <activity android:name=".Contactus" />
         <activity android:name=".Rating" />
         <activity android:name=".Personalsettings" />
         <activity android:name=".Accountsettings" />
         <activity android:name=".ResetPassword" />
+        <activity android:name=".Signup" />
         <activity android:name=".Login" />
         <activity android:name=".ColdMenu" />
         <activity android:name=".BreakfastItemOne" />
@@ -24,8 +26,9 @@
         <activity android:name=".CoffeeDrinkOne" />
         <activity android:name=".Hot_Menu" />
         <activity android:name=".CoffeeMenu" />
+        <activity android:name=".MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".AppLogo"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
