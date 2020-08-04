@@ -19,6 +19,7 @@
         <activity android:name=".Accountsettings" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".Signup" />
+        <activity android:name=".NearBy"></activity>
         <activity android:name=".Login" />
         <activity android:name=".ColdMenu" />
         <activity android:name=".BreakfastItemOne" />
