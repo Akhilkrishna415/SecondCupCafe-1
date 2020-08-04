@@ -48,13 +48,13 @@ public class CoffeeMenu extends AppCompatActivity {
         ListView simpleListview = (ListView)findViewById(R.id.listtwo);
         simpleListview.setAdapter(simpleAdapter);
 
-       /* simpleListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        simpleListview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // TODO Auto-generated method stub
                 if (position == 0) {
 
-                    Intent i = new Intent(getApplicationContext(),Items.class);
+                    Intent i = new Intent(getApplicationContext(),CoffeeDrinkOne.class);
                     startActivity(i);
                     //code specific to first list item
                     //Toast.makeText(getApplicationContext(), "Place Your First Option Code", Toast.LENGTH_SHORT).show();
@@ -69,6 +69,6 @@ public class CoffeeMenu extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Place Your Fifth Option Code", Toast.LENGTH_SHORT).show();
                 }
             }
-        });*/
+        });
     }
     }
