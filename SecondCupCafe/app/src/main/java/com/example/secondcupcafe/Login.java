@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
-    TextView resetpass;
+    TextView resetpass,signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,10 +16,18 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         resetpass=findViewById(R.id.textView3);
+        signup =findViewById(R.id.signup);
         resetpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),ResetPassword.class);
+                startActivity(i);
+            }
+        });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(),Signup.class);
                 startActivity(i);
             }
         });
