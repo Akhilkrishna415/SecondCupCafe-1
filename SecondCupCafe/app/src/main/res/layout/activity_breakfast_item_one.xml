@@ -98,6 +98,7 @@ tools:context=".BreakfastItemOne">
     android:layout_marginRight="120dp"
     android:background="#008080"
     android:text=" Order "
+    android:id="@+id/order"
     android:textColor="#EFE9E9"
     android:textColorHint="#FFFFFF" />
 </RelativeLayout>

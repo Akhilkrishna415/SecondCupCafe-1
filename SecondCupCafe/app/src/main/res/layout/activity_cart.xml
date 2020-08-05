@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cart" >
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo" />
+    <TextView
+        android:id="@+id/CartTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Order"
+        android:textStyle="italic|bold"
+        android:layout_below="@id/imageView2"
+        android:gravity="center"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/Orderno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="45"
+        android:layout_below="@id/CartTitle"
+        android:gravity="center"
+        android:textSize="19dp"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/Orderno"
+        >
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></ListView>
+    </LinearLayout>
+</RelativeLayout>

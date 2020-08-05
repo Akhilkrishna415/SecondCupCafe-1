@@ -12,14 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Payment"></activity>
+        <activity android:name=".Cart"></activity>
+        <activity android:name=".Payment" />
         <activity android:name=".Contactus" />
         <activity android:name=".Rating" />
         <activity android:name=".Personalsettings" />
         <activity android:name=".Accountsettings" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".Signup" />
-        <activity android:name=".NearBy"></activity>
+        <activity android:name=".NearBy" />
         <activity android:name=".Login" />
         <activity android:name=".ColdMenu" />
         <activity android:name=".BreakfastItemOne" />

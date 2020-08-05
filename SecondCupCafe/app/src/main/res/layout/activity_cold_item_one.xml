@@ -99,5 +99,6 @@ tools:context=".coldItemOne">
     android:textColor="@color/white"
     android:text=" Order "
     android:background="#008080"
+    android:id="@+id/order"
     />
 </RelativeLayout>
