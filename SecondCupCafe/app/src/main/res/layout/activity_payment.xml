@@ -20,10 +20,11 @@
         android:layout_height="31dp"
         android:layout_marginBottom="20dp"
         android:text="Payment Methods"
+        android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textStyle="italic" />
+        android:textSize="25sp"
+        android:textStyle="bold" />
     <TextView
         android:id="@+id/textView10"
         android:layout_width="match_parent"

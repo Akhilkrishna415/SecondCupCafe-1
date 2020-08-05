@@ -71,8 +71,6 @@ public class NotificationsFragment extends Fragment {
                 Intent i = new Intent(getActivity().getApplicationContext(), Payment.class);
                 startActivity(i);
             }
-
-
         });
         return root;
     }
