@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "927990034604",
+    "firebase_url": "https://secondcafe-7503b.firebaseio.com",
+    "project_id": "secondcafe-7503b",
+    "storage_bucket": "secondcafe-7503b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927990034604:android:759c20b3c9977751a4af09",
+        "android_client_info": {
+          "package_name": "com.example.secondcupcafe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927990034604-hbtsp2i1eeagoalh3jsskm78rmcub5ml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADAud8-P3wOl7s0YHVDJhe1Z_ihoa_hbk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927990034604-hbtsp2i1eeagoalh3jsskm78rmcub5ml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
