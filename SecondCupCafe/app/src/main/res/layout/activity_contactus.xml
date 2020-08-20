@@ -93,6 +93,7 @@
                         android:layout_marginLeft="90dp"
                         android:layout_marginTop="20dp"
                         android:scaleType="fitXY"
+                        android:onClick="call"
                         android:textAlignment="center"
                         app:srcCompat="@drawable/call" />
                 </LinearLayout>
@@ -109,6 +110,7 @@
                         android:layout_height="70dp"
                         android:layout_marginTop="20dp"
                         android:scaleType="fitXY"
+                        android:onClick="Mail"
                         app:srcCompat="@drawable/gmail" />
                 </LinearLayout>
             </LinearLayout>
