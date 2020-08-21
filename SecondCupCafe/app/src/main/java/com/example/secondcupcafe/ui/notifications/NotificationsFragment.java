@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,10 +15,13 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.secondcupcafe.Contactus;
+import com.example.secondcupcafe.Login;
 import com.example.secondcupcafe.Payment;
 import com.example.secondcupcafe.Personalsettings;
 import com.example.secondcupcafe.R;
 import com.example.secondcupcafe.Rating;
+import com.example.secondcupcafe.Signup;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class NotificationsFragment extends Fragment {
 
@@ -37,6 +41,7 @@ public class NotificationsFragment extends Fragment {
         });
 
         TextView personalSettings,payment,rating,contactUs;
+        Button Signout;
 
         personalSettings = root.findViewById(R.id.textView);
         personalSettings.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +77,16 @@ public class NotificationsFragment extends Fragment {
                 startActivity(i);
             }
         });
-        return root;
+        Signout = root.findViewById(R.id.logout);
+        Signout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(getActivity(), Login.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);//makesure user cant go back
+                startActivity(intent);
+            }
+        });
+    return root;
     }
 }
