@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/pic" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/ETemail"
         android:layout_width="272dp"
         android:layout_height="56dp"
         android:ems="10"
@@ -63,7 +63,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/ETemail" />
 
     <Button
         android:id="@+id/login"
