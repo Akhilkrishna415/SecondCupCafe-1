@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
-    TextView resetpass, signup;
+    TextView resetpass, signup ;
     Button loginbtn;
     public EditText emailId, password;
     Button btnSignIn;
@@ -31,16 +31,19 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mFirebaseAuth = FirebaseAuth.getInstance();
-        emailId = findViewById(R.id.editTextTextEmailAddress);
+        emailId = findViewById(R.id.ETemail);
         password = findViewById(R.id.editTextTextPassword);
         btnSignIn = findViewById(R.id.login);
         resetpass = findViewById(R.id.textView3);
         signup = findViewById(R.id.signup);
+
+
         resetpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), ResetPassword.class);
                 startActivity(i);
+
             }
         });
         signup.setOnClickListener(new View.OnClickListener() {
