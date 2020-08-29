@@ -32,10 +32,10 @@ import java.util.Map;
 public class BreakfastItemOne extends AppCompatActivity {
     Button order;
     FirebaseFirestore db;
-    private FirebaseUser curUser;
-    private FirebaseAuth auth;
     TextView title, price;
     EditText quantity, instructions;
+    private FirebaseUser curUser;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

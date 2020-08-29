@@ -17,6 +17,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * <h1>Get Breakfast menu for Category Menu!</h1>
  * This breakfast menu displays all the breakfast items in this page.
@@ -25,11 +26,11 @@ import java.util.List;
  * @version 1.0
  */
 public class BreakfastMenu extends AppCompatActivity {
+    final List<BreakfastModel> breakfastList = new ArrayList<>();
     //    ListView BreakFastlist;
     RecyclerView prodItemRecycler;
     BreakfastAdapter breakfastAdapter;
     FirebaseFirestore db;
-    final List<BreakfastModel> breakfastList = new ArrayList<>();
 
     //    String mTitle[] ={"Donut","Bagel","Burger","croissant"};
 //    int image[] ={R.drawable.breaktwo,R.drawable.breakthree,R.drawable.breakfour,R.drawable.breakone};
@@ -102,6 +103,7 @@ public class BreakfastMenu extends AppCompatActivity {
                                 setProdItemRecycler(breakfastList);
                                 System.out.println("Hello" + document.getId() + " => " + document.getData() + "==> " + breakfastList.toString());
                             }
+
                         } else {
                             Log.d("", "Error getting documents: ", task.getException());
                         }
@@ -110,6 +112,7 @@ public class BreakfastMenu extends AppCompatActivity {
     }
 
     private void setProdItemRecycler(List<BreakfastModel> breakfastList) {
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         prodItemRecycler.setLayoutManager(layoutManager);
         breakfastAdapter = new BreakfastAdapter(this, breakfastList);

@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-//import com.squareup.picasso.Picasso;
-
 public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.ProductViewHolder> {
 
     Context context;
