@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 
 /**
- * This class is used to display the application logo before the login screen
- * @version 1.0
- * @author Akhil Krishna
+ * This class helps to display the logo of the application
+ * before entering to login screen
+ * @author naveen sadineni
  */
 public class AppLogo extends AppCompatActivity {
     Timer timer;
@@ -21,8 +21,9 @@ public class AppLogo extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             /**
-             * This method will redirect the user to the login page
+             * This method is used display the login screen after particular time
              */
+
             public void run() {
                 Intent intent = new Intent(AppLogo.this, Login.class);
                 startActivity(intent);

@@ -4,6 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+
+/**
+ * This class helps to display items added in cart
+ * @author naveen sadineni
+ */
+
 public class Cart extends AppCompatActivity {
 
     @Override

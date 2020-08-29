@@ -14,12 +14,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
+/**
+ * <h1>Get Breakfast menu for Category Menu!</h1>
+ * This breakfast menu displays all the breakfast items in this page.
+ * @author  naveen sadineni
+ * @version 1.0
+ */
 public class BreakfastMenu extends AppCompatActivity {
     ListView BreakFastlist;
     String mTitle[] ={"Donut","Bagel","Burger","croissant"};
     int image[] ={R.drawable.breaktwo,R.drawable.breakthree,R.drawable.breakfour,R.drawable.breakone};
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_breakfast_menu);
         BreakFastlist = findViewById(R.id.breaklist);

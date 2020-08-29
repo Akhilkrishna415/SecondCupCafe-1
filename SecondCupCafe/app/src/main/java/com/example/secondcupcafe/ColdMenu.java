@@ -14,6 +14,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * This class displays the all the cold category items
+ * @author naveen sadineni
+ */
+
 public class ColdMenu extends AppCompatActivity {
 
     ListView Coldlist;
