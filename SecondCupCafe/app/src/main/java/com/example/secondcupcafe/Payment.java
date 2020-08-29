@@ -4,6 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+/**
+ * This class helps to display the payment info for the coffee shop
+ * @author naveen sadineni
+ * @version 1.0
+ */
+
 public class Payment extends AppCompatActivity {
 
     @Override

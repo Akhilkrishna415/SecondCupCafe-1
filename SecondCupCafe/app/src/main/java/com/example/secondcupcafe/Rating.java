@@ -9,7 +9,19 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * This class helps to display the rating for the coffee shop
+ * @author naveen sadineni
+ * @version 1.0
+ */
+
 public class Rating extends AppCompatActivity {
+
+    /**
+     * @param rBar it is used to display the rating bar
+     * @param tView it used to display the information
+     * @param btn it is used to give the rating
+     */
 
     private RatingBar rBar;
     private TextView tView;
@@ -22,8 +34,13 @@ public class Rating extends AppCompatActivity {
         rBar = (RatingBar) findViewById(R.id.ratingBar1);
 //            tView = (TextView) findViewById(R.id.textview1);
         btn = (Button)findViewById(R.id.btnGet);
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn.setOnClickListener(new View.OnClickListener() { // setting onclicklistner for the button
             @Override
+
+            /**
+             * This method is used to display the rating given by the user
+             */
+
             public void onClick(View v) {
                 int noofstars = rBar.getNumStars();
                 float getrating = rBar.getRating();

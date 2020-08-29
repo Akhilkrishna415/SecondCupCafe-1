@@ -24,11 +24,19 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+/**
+ * This class is used to display the home page.
+ * @version 1.0
+ * @author Akhil Krishna
+ */
+
 public class MainActivity extends AppCompatActivity {
 
 
-
-
+    /**
+     * This will let user to redirect to the home page
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

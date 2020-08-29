@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28504a69-b1dd-461f-968f-c216eeeb7ee0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/SecondCupCafe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SecondCupCafe.iml" afterDir="false" />
-    </list>
+    <list default="true" id="aeced126-7357-4b6a-a14d-0b0f4a47cf3d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,14 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="C:\Users\nikhi\Desktop\SecondCupCafe\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="ProjectId" id="1fdgl6Cz5QlLzQWInKHUnFfYohC" />
+  <component name="ProjectId" id="1fdsxNElo6TVVTvX5EzqfrOmMnh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -27,18 +18,29 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SecondCupCafe" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="28504a69-b1dd-461f-968f-c216eeeb7ee0" name="Default Changelist" comment="" />
-      <created>1596553531293</created>
+      <changelist id="aeced126-7357-4b6a-a14d-0b0f4a47cf3d" name="Default Changelist" comment="" />
+      <created>1596559549699</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1596553531293</updated>
+      <updated>1596559549699</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1596563564141">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1596563564141" />
+    <state x="110" y="120" width="1146" height="488" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1596561907799">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="110" y="120" width="1146" height="488" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1366.728@0.0.1366.728" timestamp="1596561907799" />
   </component>
 </project>

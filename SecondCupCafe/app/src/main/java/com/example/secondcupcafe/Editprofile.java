@@ -21,8 +21,25 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This class helps to edit the profile information of the user
+ * @version 1.0
+ * @author naveen sadineni
+ */
+
 public class Editprofile extends AppCompatActivity {
     private static final String TAG="TAG";
+
+    /**
+     * @param profilefullname stores the updated profile name
+     * @param profileemail stores the updated email
+     * @param profilenumber stores the updated number
+     * @param Savebtn it saves the information and redirects to the other page
+     * @param fAuth it authorizes the information with the database
+     * @param fStore It stores the information in firerestore
+     * @param user it used to get the current user
+     */
+
     EditText profilefullname,profileemail,profilenumber;
     Button saveBtn;
     FirebaseAuth fAuth;
@@ -50,6 +67,12 @@ public class Editprofile extends AppCompatActivity {
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
+
+            /**
+             * This method is used to check the fields and if the user missing any field
+             * it displays the toast message
+             */
+
             public void onClick(View v) {
                 if(profilefullname.getText().toString().isEmpty() || profileemail.getText().toString().isEmpty() || profilenumber.getText().toString().isEmpty()){
                     Toast.makeText(Editprofile.this,"one or many fields are empty",Toast.LENGTH_SHORT).show();
@@ -59,6 +82,11 @@ public class Editprofile extends AppCompatActivity {
                 final String email =profileemail.getText().toString();
                 user.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
+                    /**
+                     * This method is used to store the information in the firestore database
+                     * with the new updated information.
+                     * it displays the toast message when it is success
+                     */
                     public void onSuccess(Void aVoid) {
                         DocumentReference docref=fStore.collection("Users").document(user.getUid());
                         Map<String,Object> edited = new HashMap<>();
@@ -77,6 +105,11 @@ public class Editprofile extends AppCompatActivity {
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
+
+                    /**
+                     * This method displays the toast messge when it failed to store the details
+                     */
+
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(Editprofile.this,e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
