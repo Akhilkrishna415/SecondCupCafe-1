@@ -7,15 +7,14 @@ public class BreakfastModel {
     private String price;
     private String imageURL;
 
-    public BreakfastModel(String title, String price, String imageURL) {
-        this.title = title;
-        this.price = price;
-        this.imageURL = imageURL;
-    }
-
     public String getImageURL() {
         return imageURL;
     }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
 
 
     public String getTitle() {
@@ -38,7 +37,9 @@ public class BreakfastModel {
         this.price = price;
     }
 
-    public void setImageURL(String imageURL) {
+    public BreakfastModel(String title, String price, String imageURL) {
+        this.title = title;
+        this.price = price;
         this.imageURL = imageURL;
     }
 }
