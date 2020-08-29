@@ -7,6 +7,12 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * This class is used to display the contact information of the management of SecondCupCafe
+ * @version 1.0
+ * @author Akhil Krishna
+ */
+
 public class Contactus extends AppCompatActivity {
 
     @Override
@@ -15,6 +21,10 @@ public class Contactus extends AppCompatActivity {
         setContentView(R.layout.activity_contactus);
     }
 
+    /**
+     * This method is used to make a call to given number when he clicks on the call button
+     * @param view
+     */
     public void call(View view)
     {
         Intent call = new Intent(Intent.ACTION_DIAL);
@@ -22,6 +32,10 @@ public class Contactus extends AppCompatActivity {
         startActivity(call);
     }
 
+    /**
+     * This method helps user to send a mail to the given E mail address
+     * @param view
+     */
     public void Mail(View view)
     {
         Intent Mail = new Intent(Intent.ACTION_SEND);
