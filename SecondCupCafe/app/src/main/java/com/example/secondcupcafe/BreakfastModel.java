@@ -1,8 +1,22 @@
+package com.example.secondcupcafe;
+
 public class BreakfastModel {
 
 
     private String title;
     private String price;
+    private String imageURL;
+
+    public BreakfastModel(String title, String price, String imageURL) {
+        this.title = title;
+        this.price = price;
+        this.imageURL = imageURL;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
 
     public String getTitle() {
         return title;
@@ -24,19 +38,7 @@ public class BreakfastModel {
         this.price = price;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    private String url;
-
-    public BreakfastModel(String title, String price, String url) {
-        this.title = title;
-        this.price = price;
-        this.url = url;
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }
