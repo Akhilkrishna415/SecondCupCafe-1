@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
+/**
+ * This class helps to add the breakfast item to the cart
+ * @author naveen sadineni
+ */
+
 public class BreakfastItemOne extends AppCompatActivity {
 Button order;
     @Override
@@ -17,6 +23,10 @@ Button order;
         order = findViewById(R.id.order);
         order.setOnClickListener(new View.OnClickListener() {
             @Override
+            /**
+             * This method helps to move from breakfast screen to cart screen
+             */
+
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),Cart.class);
                 startActivity(i);

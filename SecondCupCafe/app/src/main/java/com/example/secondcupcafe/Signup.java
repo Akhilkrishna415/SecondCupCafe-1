@@ -21,24 +21,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * This is the class used to make the user to register for the first time
- * @version 1.0
- * @author Akhil Krishna
- */
+
 public class Signup extends AppCompatActivity {
     public static final String TAG = "TAG";
-    /**
-     * @param btnSignUp It makes user to sign up
-     * @param btnExistingUser This button is for the existing user
-     * @param emailId User can enter his email id
-     * @param password User needs to create a password
-     * @param firstName User should enter his first name
-     * @param mobileNumber User have to enter his/her contact number
-     * @param birthDate user should enter his birth date in this field
-     * @param mFirebaseAuth It's a firebase authentication token
-     * @param fstore It stores the user data in firebase
-     */
     Button btnSignUp;
     Button btnExistngUser;
     public EditText emailId, password, firstName, mobileNumber, birthDate;
@@ -58,11 +43,8 @@ public class Signup extends AppCompatActivity {
         firstName = findViewById(R.id.editTextPersonName);
         mobileNumber = findViewById(R.id.editTextPhone2);
         birthDate = findViewById(R.id.editTextDate);
-        btnSignUp.setOnClickListener(new View.OnClickListener() {  // setting OnClickListener for signUp button.
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
-            /**
-             * This method is used for validation
-             */
             public void onClick(View v) {
                 final String email = emailId.getText().toString();
                 final String pwd = password.getText().toString();
@@ -83,9 +65,6 @@ public class Signup extends AppCompatActivity {
                 else  if (!email.isEmpty() && !pwd.isEmpty()){
                     mFirebaseAuth.createUserWithEmailAndPassword(email, pwd).addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
                         @Override
-                        /**
-                         * This method is used to display the toast message when the Signup is Unsuccessful
-                         */
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()){
                                 Toast.makeText(Signup.this,"SignUp Unsuccessful, PLease try again using another email!",Toast.LENGTH_SHORT).show();

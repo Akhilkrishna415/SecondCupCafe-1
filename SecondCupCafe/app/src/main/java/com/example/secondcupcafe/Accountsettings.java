@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+/**
+ * Account settings class
+ */
 public class Accountsettings extends AppCompatActivity {
 
     @Override

@@ -18,7 +18,7 @@ public class CoffeeMenu extends AppCompatActivity {
 
     ListView Coffeelist;
     String mTitle[] ={"Mocha","Expresso","Black coffee","capaccinno","turkish","latte"};
-    int image[] ={R.drawable.cofone,R.drawable.coftwo,R.drawable.cofthree,R.drawable.cofee,R.drawable.turkish};
+    int image[] ={R.drawable.cofone,R.drawable.coftwo,R.drawable.cofthree,R.drawable.cofee,R.drawable.cofone};
     //img and title in array
 
     @Override
