@@ -24,7 +24,7 @@ import java.util.Map;
 
 
 /**
- * This class helps to add the breakfast item to the cart
+ * This class helps to add the breakfast item to order
  *
  * @author naveen sadineni
  */
@@ -60,6 +60,10 @@ public class BreakfastItemOne extends AppCompatActivity {
         price.setText(item_price);
 
         order = findViewById(R.id.order);
+
+        /**
+         * order button which is storing the data into the firestore database.
+         */
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             /**

@@ -14,12 +14,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+
+/**
+ * Adapter class for the Breakfast menu which controls the items display in the recycler view
+ *
+ * @author sanjay
+ */
 public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.ProductViewHolder> {
 
     Context context;
     List<BreakfastModel> breakfastlist;
 
 
+    /**
+     * Constructor for the Breakfast Adapter
+     * @param context
+     * @param breakfastlist array list of the items of breakfast
+     */
     public BreakfastAdapter(Context context, List<BreakfastModel> breakfastlist) {
         this.context = context;
         this.breakfastlist = breakfastlist;

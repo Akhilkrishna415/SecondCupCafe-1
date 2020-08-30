@@ -1,5 +1,8 @@
 package com.example.secondcupcafe;
 
+/**
+ * Model class for setting and getting the items from the list
+ */
 public class BreakfastModel {
 
 
@@ -14,7 +17,6 @@ public class BreakfastModel {
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
     }
-
 
 
     public String getTitle() {
@@ -37,6 +39,13 @@ public class BreakfastModel {
         this.price = price;
     }
 
+    /**
+     * Constructor to set the elements title and price of the items coming from database.
+     *
+     * @param title
+     * @param price
+     * @param imageURL
+     */
     public BreakfastModel(String title, String price, String imageURL) {
         this.title = title;
         this.price = price;
