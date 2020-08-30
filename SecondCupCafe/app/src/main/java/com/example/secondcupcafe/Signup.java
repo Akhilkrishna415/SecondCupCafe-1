@@ -22,6 +22,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+/**
+ * Signup class for registering yourself for the user and saving the user record in firestore
+ * @author akhil krishna
+ */
 public class Signup extends AppCompatActivity {
     public static final String TAG = "TAG";
     Button btnSignUp;

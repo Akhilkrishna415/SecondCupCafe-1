@@ -23,6 +23,11 @@ import com.example.secondcupcafe.Rating;
 import com.example.secondcupcafe.Signup;
 import com.google.firebase.auth.FirebaseAuth;
 
+/**
+ * Fragment class for the profile page
+ * inflates the personal settings page
+ * @author nikhil grover
+ */
 public class NotificationsFragment extends Fragment {
 
     private NotificationsViewModel notificationsViewModel;

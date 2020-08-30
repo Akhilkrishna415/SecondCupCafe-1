@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 /**
  * This class helps to display the nearby coffee shops
- * @author naveen sadineni
+ * @author madhu nareddy
  */
 
 public class NearBy extends AppCompatActivity {

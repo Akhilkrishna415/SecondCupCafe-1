@@ -4,6 +4,14 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+
+
+/**
+ * Fragment class for the home page
+ * inflates the home page
+ * @author nikhil grover
+ */
+
 public class HomeViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;

@@ -18,6 +18,11 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.secondcupcafe.R;
 
+/**
+ * Fragment class for the home page
+ * inflates the home page
+ * @author nikhil grover
+ */
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;

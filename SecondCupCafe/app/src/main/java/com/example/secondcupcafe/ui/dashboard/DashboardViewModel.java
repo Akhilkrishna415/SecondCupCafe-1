@@ -4,6 +4,13 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+
+
+/**
+ * Fragment class for the Orders page
+ * inflates the orders page model
+ * @author nikhil grover
+ */
 public class DashboardViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;

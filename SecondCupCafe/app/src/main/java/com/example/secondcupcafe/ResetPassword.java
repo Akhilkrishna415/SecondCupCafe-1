@@ -16,7 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * This class helps to reset the password if the user forgot the password
- * @author naveen sadineni
+ * @author madhu nareddy
  */
 
 public class ResetPassword extends AppCompatActivity {

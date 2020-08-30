@@ -17,6 +17,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/**
+ * Login class to set the emailaddress and password to get authenticated using firebase
+ * and leads to homepage
+ * @author akhil krishna
+ */
 public class Login extends AppCompatActivity {
     TextView resetpass, signup ;
     Button loginbtn;

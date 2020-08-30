@@ -14,6 +14,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
+/**
+ * CoffeMenu  class to get the list of items for category Coffee
+ * Utilising a list view items and setting to the Coffee menu xml
+ * @author nikhil
+ */
 public class CoffeeMenu extends AppCompatActivity {
 
     ListView Coffeelist;

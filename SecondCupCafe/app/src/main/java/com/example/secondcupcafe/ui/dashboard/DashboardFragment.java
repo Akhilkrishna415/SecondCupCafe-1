@@ -20,6 +20,12 @@ import com.example.secondcupcafe.ColdMenu;
 import com.example.secondcupcafe.Hot_Menu;
 import com.example.secondcupcafe.R;
 
+
+/**
+ * Fragment class for the Orders page
+ * inflates the orders page
+ * @author nikhil grover
+ */
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
