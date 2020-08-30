@@ -42,6 +42,11 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.Prod
         return new ProductViewHolder(view);
     }
 
+    /**
+     *
+     * @param holder
+     * @param position
+     */
     public void onBindViewHolder(@NonNull final ProductViewHolder holder, final int position) {
 
 //        Picasso.get().load(breakfastlist.get(position).getImageURL()).into(holder.prodImage);
@@ -80,6 +85,8 @@ public class BreakfastAdapter extends RecyclerView.Adapter<BreakfastAdapter.Prod
     }
 
     public static final class ProductViewHolder extends RecyclerView.ViewHolder {
+
+
 
         ImageView prodImage;
         TextView prodName, prodPrice;

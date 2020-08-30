@@ -1,16 +1,16 @@
 package com.example.secondcupcafe;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 
 /**
  * This class helps to display the contact info for the coffee shop
- * @author naveen sadineni
+ * @author naveen sadineni/ nikhil grover
  */
 
 public class Contactus extends AppCompatActivity {

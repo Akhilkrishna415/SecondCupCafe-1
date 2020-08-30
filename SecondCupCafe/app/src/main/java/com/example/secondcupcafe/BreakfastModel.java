@@ -2,6 +2,7 @@ package com.example.secondcupcafe;
 
 /**
  * Model class for setting and getting the items from the list
+ * @author sanjay
  */
 public class BreakfastModel {
 

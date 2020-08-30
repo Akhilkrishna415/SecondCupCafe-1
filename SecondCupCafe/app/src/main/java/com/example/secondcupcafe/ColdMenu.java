@@ -1,17 +1,20 @@
 package com.example.secondcupcafe;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
-import android.widget.Toast;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -20,15 +23,28 @@ import java.util.List;
  */
 
 public class ColdMenu extends AppCompatActivity {
+    final List<BreakfastModel> CoffeeColdlist = new ArrayList<>();
 
-    ListView Coldlist;
+   /* ListView Coldlist;
     String mTitle[] ={"Cold Coffee","Ice Tea","ice cap","Coca cola"};
     int image[] ={R.drawable.cold,R.drawable.coldtwo,R.drawable.coldthree,R.drawable.coldfour};
+
+    */
+   RecyclerView prodItemRecycler;
+    BreakfastAdapter breakfastAdapter;
+    FirebaseFirestore db;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cold_menu);
-        Coldlist = findViewById(R.id.coldlist);
+
+        prodItemRecycler = findViewById(R.id.product_recycler);
+        Log.d("sanjay", "Before finding Breakfast list view id");
+//        BreakFastlist = findViewById(R.id.product_recycler);
+        Log.d("sanjay", "Before finding Breakfast list loadMenu");
+        loadCoffeeColdMenu();
+       /* Coldlist = findViewById(R.id.coldlist);
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String, String>>();
         for (int x = 0; x < 4; x++){
             HashMap<String, String> hm = new HashMap<String,String>();
@@ -67,5 +83,45 @@ public class ColdMenu extends AppCompatActivity {
                 }
             }
         });
+
+        */
+    }
+
+    /**
+     * this method retreives the information from the firestore and displays it on the xml page
+     */
+    private void loadCoffeeColdMenu() {
+        db = FirebaseFirestore.getInstance();
+        Log.d("sanjay", "Entering coffee list loadMenu");
+        db.collection("cold_brew_item")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d("sanjay", document.getId() + " => " + document.getData());
+                                System.out.println("Hello" + document.getId() + " => " + document.getData());
+                                String name = (String) document.getData().get("item_name");
+                                String price = (String) document.getData().get("price");
+                                String imageurl = (String) document.getData().get("item_image");
+//                                getImage(id,image,name,description,size,price,productsList,subbrand,detail_image);
+                                CoffeeColdlist.add(new BreakfastModel(name, price, imageurl));
+                                setProdItemRecycler(CoffeeColdlist);
+                                System.out.println("Hello" + document.getId() + " => " + document.getData() + "==> " + CoffeeColdlist.toString());
+                            }
+
+                        } else {
+                            Log.d("", "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
+    }
+    private void setProdItemRecycler(List<BreakfastModel> coffeelist) {
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
+        prodItemRecycler.setLayoutManager(layoutManager);
+        breakfastAdapter = new BreakfastAdapter(this, CoffeeColdlist);
+        prodItemRecycler.setAdapter(breakfastAdapter);
     }
 }

@@ -1,39 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".ColdMenu">
-<ImageView
-    android:id="@+id/logo"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:src="@drawable/logo"/>
-<LinearLayout
-    android:id="@+id/title2"
-    android:layout_width="match_parent"
-    android:layout_height="70dp"
-    android:orientation="horizontal">
-    <ImageView
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ColdMenu">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/cold"
-        android:layout_weight="1"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="Cold Coffee"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="@color/tea1"
-        android:textStyle="bold"/>
-</LinearLayout>
-<ListView
-    android:id="@+id/coldlist"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/product_row_item" />
 </LinearLayout>

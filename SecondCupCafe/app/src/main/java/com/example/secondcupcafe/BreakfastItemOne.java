@@ -26,7 +26,7 @@ import java.util.Map;
 /**
  * This class helps to add the breakfast item to order
  *
- * @author naveen sadineni
+ * @author sanjay
  */
 
 public class BreakfastItemOne extends AppCompatActivity {
@@ -36,6 +36,8 @@ public class BreakfastItemOne extends AppCompatActivity {
     EditText quantity, instructions;
     private FirebaseUser curUser;
     private FirebaseAuth auth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +69,10 @@ public class BreakfastItemOne extends AppCompatActivity {
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             /**
-             * This method helps to move from breakfast screen to order screen
+             * This method helps to move from breakfast screen to home screen
+             *and displays the Toast message for order confirmation.
              */
+
 
             public void onClick(View v) {
 
